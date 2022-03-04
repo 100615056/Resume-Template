@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --title-fnt: "Nunito Sans", sans-serif;
+    --content-fnt: "Catamaran", sans-serif;
+    --sidebar-clr: #7c9ccc;
+    /* 24pt */
+    --name-sz: 2rem;
+    /* 20pt */
+    --title-sz: 1.667rem;
+    /* 12pt */
+    --content-sz: 1rem;
+    --side-ln-clr: #fff;
+    --main-ln-clr: #000000;
+    --max-width: 1100px;
+    --print-width: 500px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--content-fnt);
+    font-size: var(--content-sz);
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-family: var(--title-fnt);
+    font-size: var(--name-sz);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: var(--title-fnt);
+    font-size: var(--title-sz);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.personal-information {
+    background-color: var(--sidebar-clr);
+    padding: 0.5em 2em 0.5em 0.5em;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.mobile {
+    margin: 0;
+}
+
+.contact__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact__name {
+    margin-bottom: 0.75rem;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.job__info {
+    margin-top: 2rem;
+    line-height: 0.5;
+}
+
+.side-line {
+    border-bottom: var(--side-ln-clr) 2px solid;
+}
+
+.main-line {
+    border-bottom: var(--main-ln-clr) 2px solid;
+}
+
+.skills__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 2;
+}
+
+@media (min-width: 600px) {
+    .format {
+        display: flex;
+    }
+}
+
+@media print {
+    .format {
+        display: flex;
+    }
+
+    .container {
+        width: 90%;
+        max-width: var(--print-width);
+        margin: 0 auto;
+    }
+}
