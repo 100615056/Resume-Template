@@ -10,14 +10,15 @@
     --sidebar-clr: #7c9ccc;
     /* 24pt */
     --name-sz: 2rem;
-    /* 20pt */
-    --title-sz: 1.667rem;
+    /* 16pt */
+    --title-sz: 1.333rem;
     /* 12pt */
     --content-sz: 1rem;
     --side-ln-clr: #fff;
     --main-ln-clr: #000000;
     --max-width: 1100px;
-    --print-width: 500px;
+    --side-width: 450px;
+    --print-side: 280px;
 }
 
 body {
@@ -41,10 +42,7 @@ h2 {
     font-family: var(--title-fnt);
     font-size: var(--title-sz);
     text-transform: uppercase;
-}
-
-h3 {
-    font-weight: bold;
+    margin-bottom: 0;
 }
 
 a {
@@ -54,7 +52,7 @@ a {
 
 .personal-information {
     background-color: var(--sidebar-clr);
-    padding: 0.5em 2em 0.5em 0.5em;
+    padding: 0.5em 1.5em 0.5em 0em;
 }
 
 .container {
@@ -71,11 +69,12 @@ a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact__name {
-    margin-bottom: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 .icon {
@@ -83,8 +82,26 @@ a {
     height: 2rem;
 }
 
+.objective__title {
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.objective__info {
+    margin-top: 0.5rem;
+}
+
+.project__title {
+    margin-bottom: 0;
+    line-height: 0.5;
+}
+
+.education__info {
+    line-height: 1;
+}
+
 .job__info {
-    margin-top: 2rem;
+    margin-top: 1.2rem;
     line-height: 0.5;
 }
 
@@ -97,7 +114,7 @@ a {
 }
 
 .skills__list {
-    margin: 0;
+    margin-top: 0.5rem;
     padding: 0;
     list-style: none;
     line-height: 2;
@@ -107,16 +124,21 @@ a {
     .format {
         display: flex;
     }
+
+    .sidebar {
+        max-width: var(--side-width);
+    }
 }
 
 @media print {
-    .format {
-        display: flex;
+    .main-content {
+        width: 95%;
+    }
+    .sidebar {
+        max-width: var(--print-side);
     }
 
-    .container {
-        width: 90%;
-        max-width: var(--print-width);
-        margin: 0 auto;
+    .achievement__title {
+        padding-top: 1rem;
     }
 }
